@@ -517,6 +517,9 @@ function voting(){
     }
     voitingcontainerspan.textContent=players[votingcount].name;
     for (let i=0;i<players.length;i++){
+        if(i==votingcount){
+            continue;
+        }
         let playervotebutton=document.createElement('button');
         playervotebutton.textContent=players[i].name;
         buttonsvoteDiv.appendChild(playervotebutton);
